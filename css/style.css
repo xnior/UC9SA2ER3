@@ -58,6 +58,11 @@ nav a {
     text-decoration: none;
 }
 
+.table-games {
+    position: absolute;
+    top: 0px;
+}
+
 nav a:hover:not(.active) {
     background-color: red;
     font: bold;

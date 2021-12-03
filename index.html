@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body onload="rendenizarNoticias()">
+<body onload="rendenizarNoticias(),rendenizarListaClassificados()">
     <header>
         <div class="container cabecalho">
             <span><img src="img/logo.svg" class="logo" alt="Logo de Aplicação do Site"></span>
@@ -84,8 +84,23 @@
             </div> -->
 
         </div>
+        <div style="position: relative; ">
+            <aside>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Sobr</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-classificados">
 
-
+                    </tbody>
+                </table>
+            </aside>
+        </div>
     </section>
 
 

@@ -25,7 +25,7 @@ function rendenizarNoticias() {
 
 
 
-    let espaco = document.getElementById("espaco-noticias");
+    var espaco = document.getElementById("espaco-noticias");
 
     let listaNoticias = [
 
@@ -63,16 +63,64 @@ function rendenizarNoticias() {
         const noticia = listaNoticias[index];
 
 
-        template += `<div class="col-md-2 cardNews">
+        template += `<div class="col-md-3 cardNews">
         <img src="${noticia.imagem}" class="img-thumbnail" alt="Imagem de Notícia">
         <h4>${noticia.titulo}</h3>
         <p>${noticia.descricao}</p>
         </div>   `
-
-
     }
 
 
-
     espaco.innerHTML = template;
+}
+
+function rendenizarListaClassificados() {
+    let espacoclassificados = document.getElementById("lista-classificados");
+
+    let listaClassificados = [{
+        nome: "Jose",
+        sobrenome: "Maria",
+        handle: "@jmar"
+    }, {
+        nome: "Maria",
+        sobrenome: "Jose",
+        handle: "@marj"
+    }, {
+        nome: "Rick",
+        sobrenome: "Martin",
+        handle: "@rmart"
+    }, {
+        nome: "Martin",
+        sobrenome: "Rick",
+        handle: "@maRick"
+    }, {
+        nome: "Ninja",
+        sobrenome: "Garden",
+        handle: "@ningar"
+    }, {
+        nome: "Rafael",
+        sobrenome: "Nogueira",
+        handle: "@rafnog"
+    }, {
+        nome: "Vin",
+        sobrenome: "Martin",
+        handle: "@vinmart"
+    }, {
+        nome: "José",
+        sobrenome: "Antônio",
+        handle: "@josan"
+    }]
+    console.log(listaClassificados);
+
+    let templateclass = "";
+    for (let index = 0; index < listaClassificados.length; index++) {
+        const listclass = listaClassificados[index];
+        templateclass += `<tr>
+                            <th scope="row">${index+1}</th>
+                            <td>${listclass.nome}</td>
+                            <td>${listclass.sobrenome}</td>
+                            <td>${listclass.handle}</td>
+                         </tr>`
+    }
+    espacoclassificados.innerHTML = templateclass;
 }
