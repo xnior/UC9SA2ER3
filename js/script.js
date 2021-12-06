@@ -12,6 +12,11 @@ function mostrarMenu() {
     }
 }
 
+function mudartamanhotabelagamer() {
+    let tabelagamer = document.getElementById("tabela-gamer");
+
+    tabelagamer.style.fontSize = "8px";
+}
 
 
 function cadastrarNewsletter() {
